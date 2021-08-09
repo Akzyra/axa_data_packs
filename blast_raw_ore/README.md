@@ -4,7 +4,7 @@ Smelt raw ore blocks into material blocks in the **Blast Furnace**.
 
 To make things easy, **smelting duration is 8 times**:
 
-**Datapack + (Char-)Coal:** 1 coal smelts 1 ore
+**Datapack + (Char-)Coal:** 1 coal smelts 1 ore   
 **Datapack + Coal Blocks:** 1 coal block smelts 10 ore blocks
 
 
