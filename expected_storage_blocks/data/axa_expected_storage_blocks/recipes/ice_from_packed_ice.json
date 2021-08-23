@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "brick",
+  "group": "ice",
   "ingredients": [
     {
-      "item": "minecraft:bricks"
+      "item": "minecraft:packed_ice"
     }
   ],
   "result": {
-    "item": "minecraft:brick",
-    "count": 4
+    "item": "minecraft:ice",
+    "count": 9
   }
 }

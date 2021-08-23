@@ -38,6 +38,10 @@ def handle_stair_slab(filename: str, recipe: dict, key: str, is_stair: bool):
 
 
 if __name__ == '__main__':
+    os.makedirs(STAIR_CRAFTING, exist_ok=True)
+    os.makedirs(STAIR_UNCRAFTING, exist_ok=True)
+    os.makedirs(SLAB_UNCRAFTING, exist_ok=True)
+
     for filename, recipe in list_recipes():
         try:
             if recipe['type'] != 'minecraft:crafting_shaped':

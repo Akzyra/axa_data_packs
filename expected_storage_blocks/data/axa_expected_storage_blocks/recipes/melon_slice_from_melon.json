@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "melon_slide",
+  "group": "melon_slice",
   "ingredients": [
     {
       "item": "minecraft:melon"

@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "quartz",
+  "group": "magma_cream",
   "ingredients": [
     {
-      "item": "minecraft:quartz_block"
+      "item": "minecraft:magma_block"
     }
   ],
   "result": {
-    "item": "minecraft:quartz",
+    "item": "minecraft:magma_cream",
     "count": 4
   }
 }

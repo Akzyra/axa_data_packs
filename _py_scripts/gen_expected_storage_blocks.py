@@ -1,7 +1,7 @@
 import json
 import os
 
-from py_scripts.utils import recipe_unpack
+from utils import recipe_unpack
 
 RECIPES_PATH = '../expected_storage_blocks/data/axa_expected_storage_blocks/recipes'
 RECIPES_PATH_EXT = '../expected_storage_blocks/data/axa_expected_storage_blocks_ext/recipes'
@@ -9,7 +9,7 @@ RECIPES_PATH_EXT = '../expected_storage_blocks/data/axa_expected_storage_blocks_
 UNPACKING = [
     # clay and bricks
     ('minecraft:clay', 'minecraft:clay_ball', 4),
-    ('minecraft:bricks', 'minecraft:brick', 4, True),
+    ('minecraft:bricks', 'minecraft:brick', 4, 'ext'),
     ('minecraft:nether_bricks', 'minecraft:nether_brick', 4, 'ext'),
 
     # icey
@@ -36,6 +36,7 @@ UNPACKING = [
 
 if __name__ == '__main__':
     os.makedirs(RECIPES_PATH, exist_ok=True)
+    os.makedirs(RECIPES_PATH_EXT, exist_ok=True)
     for u in UNPACKING:
         in_item = u[0].split(':', 1)[1]
         out_item = u[1].split(':', 1)[1]

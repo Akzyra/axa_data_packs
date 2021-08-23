@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "quartz",
+  "group": "nether_brick",
   "ingredients": [
     {
-      "item": "minecraft:quartz_block"
+      "item": "minecraft:nether_bricks"
     }
   ],
   "result": {
-    "item": "minecraft:quartz",
+    "item": "minecraft:nether_brick",
     "count": 4
   }
 }
