@@ -13,9 +13,8 @@ from utils import list_recipes, fix_result
 
 
 if __name__ == '__main__':
-    for path in list_recipes():
+    for filename, recipe in list_recipes():
         try:
-            recipe: dict = json.loads(open(path).read())
             t = recipe['type']
             if t not in ('minecraft:crafting_shapeless', 'minecraft:crafting_shaped'):
                 continue
