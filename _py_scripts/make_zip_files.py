@@ -21,7 +21,7 @@ if __name__ == '__main__':
         print(f'zipping {path.name}...', end='')
 
         pack_name = path.name
-        z = ZipFile(DIST / f'{pack_name}.zip', 'w', ZIP_DEFLATED)
+        z = ZipFile(DIST / f'axa_{pack_name}.zip', 'w', ZIP_DEFLATED)
         for p in walk(path):
             zip_path = p.relative_to(path)
             z.write(p, zip_path)
