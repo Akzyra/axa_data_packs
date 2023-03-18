@@ -1,7 +1,7 @@
 from pathlib import Path
 from zipfile import ZipFile, ZIP_DEFLATED
 
-DIST = Path('../dist')
+DIST = Path('dist')
 
 
 def walk(path: Path):
@@ -14,7 +14,7 @@ def walk(path: Path):
 def main():
     DIST.mkdir(exist_ok=True)
 
-    for path in Path('..').iterdir():
+    for path in Path('').iterdir():
         if path.name.startswith(('_', '.')) or not path.is_dir() or not (path / 'pack.mcmeta').exists():
             continue
 
