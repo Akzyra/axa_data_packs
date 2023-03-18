@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "melon_slice",
   "ingredients": [
     {
       "item": "minecraft:melon"
@@ -9,5 +8,6 @@
   "result": {
     "item": "minecraft:melon_slice",
     "count": 9
-  }
+  },
+  "group": "melon_slice"
 }

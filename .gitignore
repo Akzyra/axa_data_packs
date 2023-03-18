@@ -1,5 +1,5 @@
 .idea/
 dist/
-mc_assets/
+_mc_assets/
 *.zip
 *.psd

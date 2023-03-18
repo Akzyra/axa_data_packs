@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "quartz",
   "ingredients": [
     {
       "item": "minecraft:quartz_pillar"
@@ -9,5 +8,6 @@
   "result": {
     "item": "minecraft:quartz",
     "count": 4
-  }
+  },
+  "group": "quartz"
 }
