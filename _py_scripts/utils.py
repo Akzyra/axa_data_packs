@@ -1,26 +1,23 @@
-import os
-
+from pathlib import Path
 import json
-from typing import Any, Tuple
+from typing import Any, Tuple, Generator
 
-VANILLA_RECIPES_PATH = '../../mc_assets/data/minecraft/recipes'
-
-
-def read_json(path: str) -> dict:
-    with open(path) as f:
-        return json.loads(f.read())
+VANILLA_RECIPES_PATH = Path('../_mc_assets/data/minecraft/recipes')
 
 
-def save_json(path: str, data: dict):
-    with open(path, 'w+') as f:
-        f.write(json.dumps(data, indent=2))
+def read_json(path: Path) -> dict:
+    with path.open("r", encoding="utf-8") as f:
+        return json.load(f)
 
 
-def list_recipes():
-    for filename in sorted(os.listdir(VANILLA_RECIPES_PATH)):
-        filepath = os.path.join(VANILLA_RECIPES_PATH, filename)
-        if filename.endswith('.json') and os.path.isfile(filepath):
-            yield filename, read_json(filepath)
+def save_json(path: Path, data: dict):
+    with path.open("w+", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
+
+
+def read_all_recipes() -> Generator[tuple[str, dict], None, None]:
+    for file in VANILLA_RECIPES_PATH.glob('*.json'):
+        yield file.name, read_json(file)
 
 
 def handle_multiple_choice(recipe: dict, key: str, preferred: list) -> Tuple[str, str]:
@@ -62,33 +59,30 @@ def fix_result(result: Any) -> Tuple[str, int]:
 def recipe_unpack(packed_item: str, unpacked_item: str, output: int, group: str = None) -> dict:
     recipe = {
         "type": "minecraft:crafting_shapeless",
-        "group": group,
         "ingredients": [{"item": packed_item}],
         "result": {"item": unpacked_item, "count": output}
     }
-    if not group: recipe.pop('group')
+    if group: recipe['group'] = group
     return recipe
 
 
 def recipe_stair_uncraft(stair_item: str, block_item: str, output=3, group: str = None) -> dict:
     recipe = {
         "type": "minecraft:crafting_shaped",
-        "group": group,
         "pattern": ["##", "##"],
         "key": {"#": {"item": stair_item}},
         "result": {"item": block_item, "count": output}
     }
-    if not group: recipe.pop('group')
+    if group: recipe['group'] = group
     return recipe
 
 
 def recipe_slab_uncraft(slab_item: str, block_item: str, group: str = None) -> dict:
     recipe = {
         "type": "minecraft:crafting_shaped",
-        "group": group,
         "pattern": ["##"],
         "key": {"#": {"item": slab_item}},
         "result": {"item": block_item}
     }
-    if not group: recipe.pop('group')
+    if group: recipe['group'] = group
     return recipe

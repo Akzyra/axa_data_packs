@@ -1,11 +1,10 @@
-import json
-import os
+from pathlib import Path
 
-from utils import list_recipes, save_json, handle_multiple_choice, recipe_stair_uncraft, recipe_slab_uncraft
+from utils import read_all_recipes, save_json, handle_multiple_choice, recipe_stair_uncraft, recipe_slab_uncraft
 
-STAIR_CRAFTING = '../logical_stair_slab_un_crafting/data/minecraft/recipes'
-STAIR_UNCRAFTING = '../logical_stair_slab_un_crafting/data/axa_stair_uncrafting/recipes'
-SLAB_UNCRAFTING = '../logical_stair_slab_un_crafting/data/axa_slab_uncrafting/recipes'
+STAIR_CRAFTING = Path('../logical_stair_slab_un_crafting/data/minecraft/recipes')
+STAIR_UNCRAFTING = Path('../logical_stair_slab_un_crafting/data/axa_stair_uncrafting/recipes')
+SLAB_UNCRAFTING = Path('../logical_stair_slab_un_crafting/data/axa_slab_uncrafting/recipes')
 
 # automatically pick these if multiple items are possible
 UNCRAFTING_PREFERRED = [
@@ -22,27 +21,28 @@ def handle_stair_slab(filename: str, recipe: dict, key: str, is_stair: bool):
     if is_stair:
         print(f'STAIR: {filename}')
         un_recipe = recipe_stair_uncraft(stair_item=result_item, block_item=input_item)
-        un_path = os.path.join(STAIR_UNCRAFTING, filename)
+        un_path = STAIR_UNCRAFTING / filename
 
-        with open(os.path.join(STAIR_CRAFTING, filename), 'w+') as f:
-            recipe['result']['count'] = 8
-            f.write(json.dumps(recipe, indent=2))
-            print(' - patched')
+        # change amount for stair craft
+        recipe['result']['count'] = 8
+        craft_path = STAIR_CRAFTING / filename
+        save_json(craft_path, recipe)
+        print(' - patched')
     else:
         print(f'SLAB: {filename}')
         un_recipe = recipe_slab_uncraft(slab_item=result_item, block_item=input_item)
-        un_path = os.path.join(SLAB_UNCRAFTING, filename)
+        un_path = SLAB_UNCRAFTING / filename
 
     save_json(un_path, un_recipe)
     print(' - uncrafted')
 
 
-if __name__ == '__main__':
-    os.makedirs(STAIR_CRAFTING, exist_ok=True)
-    os.makedirs(STAIR_UNCRAFTING, exist_ok=True)
-    os.makedirs(SLAB_UNCRAFTING, exist_ok=True)
+def main():
+    STAIR_CRAFTING.mkdir(parents=True, exist_ok=True)
+    STAIR_UNCRAFTING.mkdir(parents=True, exist_ok=True)
+    SLAB_UNCRAFTING.mkdir(parents=True, exist_ok=True)
 
-    for filename, recipe in list_recipes():
+    for filename, recipe in read_all_recipes():
         try:
             if recipe['type'] != 'minecraft:crafting_shaped':
                 continue
@@ -51,19 +51,27 @@ if __name__ == '__main__':
             if 'slab' not in result_item and 'stair' not in result_item:
                 continue
 
-            joined = ''.join(recipe['pattern'])
-            x = joined[0]
-            if x != ' ' and joined == x * 3:
-                handle_stair_slab(filename, recipe, key=x, is_stair=False)
-            elif len(joined) == 9:
-                if x != ' ':
-                    expected = f'{x}  {x}{x} {x}{x}{x}'
-                else:
-                    # if for some reason there is a mirror recipe
-                    x = joined[2]
-                    expected = f'  {x} {x}{x}{x}{x}{x}'
-                if joined == expected:
-                    handle_stair_slab(filename, recipe, key=x, is_stair=True)
+            pattern = ''.join(recipe['pattern'])
+            if len(pattern) not in (3, 9):
+                continue
+
+            key = pattern[0]
+            key_alt = pattern[2]
+            expected_slab = '###'.replace('#', key)
+            expected_stair = '#  ## ###'.replace('#', key)
+            expected_stair_alt = '  # #####'.replace('#', key_alt)
+
+            if pattern == expected_slab:
+                handle_stair_slab(filename, recipe, key=key, is_stair=False)
+            elif pattern == expected_stair:
+                handle_stair_slab(filename, recipe, key=key, is_stair=True)
+            elif pattern == expected_stair_alt:
+                handle_stair_slab(filename, recipe, key=key_alt, is_stair=True)
+
 
         except Exception as e:
             print(e, recipe)
+
+
+if __name__ == '__main__':
+    main()
