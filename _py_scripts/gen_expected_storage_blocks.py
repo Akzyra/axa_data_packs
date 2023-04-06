@@ -36,7 +36,7 @@ UNPACKING = [
     ('minecraft:prismarine_bricks', 'minecraft:prismarine_shard', 9),
 
     # misc
-    ('minecraft:white_wool', 'minecraft:string', 4),
+    # ('minecraft:white_wool', 'minecraft:string', 4), # handled manually because of wool colors
     ('minecraft:amethyst_block', 'minecraft:amethyst_shard', 4),
     ('minecraft:melon', 'minecraft:melon_slice', 9),
     ('minecraft:honeycomb_block', 'minecraft:honeycomb', 4),
