@@ -1,6 +1,9 @@
 name: Build datapack ZIP files
 
-on: push
+on:
+  push:
+    tags:
+      - '*'
 
 jobs:
   build:
