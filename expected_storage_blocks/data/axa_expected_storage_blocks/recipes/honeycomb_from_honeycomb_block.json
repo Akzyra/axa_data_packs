@@ -1,5 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "honeycomb",
   "ingredients": [
     {
       "item": "minecraft:honeycomb_block"
@@ -8,6 +10,5 @@
   "result": {
     "item": "minecraft:honeycomb",
     "count": 4
-  },
-  "group": "honeycomb"
+  }
 }

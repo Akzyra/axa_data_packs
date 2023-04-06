@@ -1,5 +1,6 @@
 {
   "type": "minecraft:blasting",
+  "category": "misc",
   "group": "gold_block",
   "ingredient": {
     "item": "minecraft:raw_gold_block"

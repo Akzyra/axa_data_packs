@@ -1,22 +1,24 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "#S#",
-        "P#P",
-        "#P#"
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:gunpowder"
-        },
-        "S": {
-            "item": "minecraft:string"
-        },
-        "P": {
-            "item": "minecraft:paper"
-        }
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "#S#",
+    "P#P",
+    "#P#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:gunpowder"
     },
-    "result": {
-        "item": "minecraft:tnt"
-	}
+    "S": {
+      "item": "minecraft:string"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "item": "minecraft:tnt"
+  },
+  "show_notification": true
 }

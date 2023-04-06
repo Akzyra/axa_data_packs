@@ -1,5 +1,6 @@
 {
   "type": "minecraft:blasting",
+  "category": "misc",
   "group": "copper_block",
   "ingredient": {
     "item": "minecraft:raw_copper_block"

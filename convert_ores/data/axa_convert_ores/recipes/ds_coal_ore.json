@@ -1,15 +1,17 @@
 {
-    "type": "minecraft:crafting_shapeless",
-    "ingredients": [
-        {
-            "item": "minecraft:deepslate"
-        },
-        {
-            "item": "minecraft:coal_ore"
-        }
-    ],
-    "result": {
-        "item": "minecraft:deepslate_coal_ore",
-        "count": 1
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "ds_ore",
+  "ingredients": [
+    {
+      "item": "minecraft:deepslate"
+    },
+    {
+      "item": "minecraft:coal_ore"
     }
+  ],
+  "result": {
+    "item": "minecraft:deepslate_coal_ore",
+    "count": 1
+  }
 }
