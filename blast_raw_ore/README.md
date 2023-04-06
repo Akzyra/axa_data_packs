@@ -2,11 +2,11 @@
 
 Smelt raw ore blocks into material blocks in the **Blast Furnace**.
 
-- Duration of ore blocks is 8&times; that of single raw ore
+- Duration of ore blocks is 8× that of single raw ore
   - **Datapack + Coal:** 1 coal smelts 1 ore block
   - **Datapack + Coal Blocks:** 1 coal block smelts 10 ore blocks
   - *Coal blocks smelting 10 items is [vanilla behavior](https://minecraft.fandom.com/wiki/Block_of_Coal#Fuel).*
-- Experience is 9&times; that of single raw ore
+- Experience is 9× that of single raw ore
 
 | Input                |  XP | Time |
 |----------------------|----:|-----:|
