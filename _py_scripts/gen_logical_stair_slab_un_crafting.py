@@ -2,6 +2,9 @@ from pathlib import Path
 
 from utils import read_all_recipes, save_json, handle_multiple_choice, recipe_stair_uncraft, recipe_slab_uncraft
 
+# only use the following values: 4 (vanilla), 6 (stonecutter), 8 (math), 12, 24
+STAIR_CRAFT_OUTPUT = 8
+
 STAIR_CRAFTING = Path('../logical_stair_slab_un_crafting/data/minecraft/recipes')
 STAIR_UNCRAFTING = Path('../logical_stair_slab_un_crafting/data/axa_stair_uncrafting/recipes')
 SLAB_UNCRAFTING = Path('../logical_stair_slab_un_crafting/data/axa_slab_uncrafting/recipes')
@@ -20,11 +23,15 @@ def handle_stair_slab(filename: str, recipe: dict, key: str, is_stair: bool):
 
     if is_stair:
         print(f'STAIR: {filename}')
-        un_recipe = recipe_stair_uncraft(stair_item=result_item, block_item=input_item)
+        un_recipe = recipe_stair_uncraft(
+            stair_item=result_item,
+            block_item=input_item,
+            stair_craft_output=STAIR_CRAFT_OUTPUT
+        )
         un_path = STAIR_UNCRAFTING / filename
 
         # change amount for stair craft
-        recipe['result']['count'] = 8
+        recipe['result']['count'] = STAIR_CRAFT_OUTPUT
         craft_path = STAIR_CRAFTING / filename
         save_json(craft_path, recipe)
         print(' - patched')

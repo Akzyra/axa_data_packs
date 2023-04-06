@@ -59,30 +59,37 @@ def fix_result(result: Any) -> Tuple[str, int]:
 def recipe_unpack(packed_item: str, unpacked_item: str, output: int, group: str = None) -> dict:
     recipe = {
         "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "group": group,
         "ingredients": [{"item": packed_item}],
         "result": {"item": unpacked_item, "count": output}
     }
-    if group: recipe['group'] = group
+    if not group:
+        del recipe['group']
     return recipe
 
 
-def recipe_stair_uncraft(stair_item: str, block_item: str, output=3, group: str = None) -> dict:
+def recipe_stair_uncraft(stair_item: str, block_item: str, stair_craft_output: int) -> dict:
+    # calculate ratio from crafting stairs to correctly uncraft
+    output = 6 / stair_craft_output * 4
     recipe = {
         "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "group": "uncraft_stairs",
         "pattern": ["##", "##"],
         "key": {"#": {"item": stair_item}},
-        "result": {"item": block_item, "count": output}
+        "result": {"item": block_item, "count": int(output)}
     }
-    if group: recipe['group'] = group
     return recipe
 
 
-def recipe_slab_uncraft(slab_item: str, block_item: str, group: str = None) -> dict:
+def recipe_slab_uncraft(slab_item: str, block_item: str) -> dict:
     recipe = {
         "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "group": "uncraft_slabs",
         "pattern": ["##"],
         "key": {"#": {"item": slab_item}},
         "result": {"item": block_item}
     }
-    if group: recipe['group'] = group
     return recipe
