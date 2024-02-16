@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "uncraft_slabs",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cherry_slab"
+    }
+  },
+  "result": {
+    "item": "minecraft:cherry_planks"
+  }
+}

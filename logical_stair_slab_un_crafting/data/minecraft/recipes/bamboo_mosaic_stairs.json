@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "minecraft:granite"
+      "item": "minecraft:bamboo_mosaic"
     }
   },
   "pattern": [
@@ -13,6 +13,6 @@
   ],
   "result": {
     "count": 8,
-    "item": "minecraft:granite_stairs"
+    "item": "minecraft:bamboo_mosaic_stairs"
   }
 }
