@@ -3,12 +3,10 @@
   "category": "misc",
   "group": "melon_slice",
   "ingredients": [
-    {
-      "item": "minecraft:melon"
-    }
+    "minecraft:melon"
   ],
   "result": {
-    "item": "minecraft:melon_slice",
-    "count": 9
+    "count": 9,
+    "id": "minecraft:melon_slice"
   }
 }

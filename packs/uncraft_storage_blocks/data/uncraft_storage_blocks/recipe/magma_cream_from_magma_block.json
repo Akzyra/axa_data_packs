@@ -3,12 +3,10 @@
   "category": "misc",
   "group": "magma_cream",
   "ingredients": [
-    {
-      "item": "minecraft:magma_block"
-    }
+    "minecraft:magma_block"
   ],
   "result": {
-    "item": "minecraft:magma_cream",
-    "count": 4
+    "count": 4,
+    "id": "minecraft:magma_cream"
   }
 }

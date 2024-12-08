@@ -3,12 +3,10 @@
   "category": "misc",
   "group": "brick",
   "ingredients": [
-    {
-      "item": "minecraft:bricks"
-    }
+    "minecraft:bricks"
   ],
   "result": {
-    "item": "minecraft:brick",
-    "count": 4
+    "count": 4,
+    "id": "minecraft:brick"
   }
 }

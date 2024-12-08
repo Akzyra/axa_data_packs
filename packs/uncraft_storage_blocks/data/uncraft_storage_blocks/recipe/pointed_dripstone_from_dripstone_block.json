@@ -3,12 +3,10 @@
   "category": "misc",
   "group": "pointed_dripstone",
   "ingredients": [
-    {
-      "item": "minecraft:dripstone_block"
-    }
+    "minecraft:dripstone_block"
   ],
   "result": {
-    "item": "minecraft:pointed_dripstone",
-    "count": 4
+    "count": 4,
+    "id": "minecraft:pointed_dripstone"
   }
 }

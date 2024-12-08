@@ -3,12 +3,10 @@
   "category": "misc",
   "group": "quartz",
   "ingredients": [
-    {
-      "item": "minecraft:quartz_pillar"
-    }
+    "minecraft:smooth_quartz"
   ],
   "result": {
-    "item": "minecraft:quartz",
-    "count": 4
+    "count": 4,
+    "id": "minecraft:quartz"
   }
 }

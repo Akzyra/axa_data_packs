@@ -3,12 +3,10 @@
   "category": "misc",
   "group": "glowstone_dust",
   "ingredients": [
-    {
-      "item": "minecraft:glowstone"
-    }
+    "minecraft:glowstone"
   ],
   "result": {
-    "item": "minecraft:glowstone_dust",
-    "count": 4
+    "count": 4,
+    "id": "minecraft:glowstone_dust"
   }
 }

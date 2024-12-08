@@ -3,12 +3,10 @@
   "category": "misc",
   "group": "sand",
   "ingredients": [
-    {
-      "item": "minecraft:sandstone"
-    }
+    "minecraft:sandstone"
   ],
   "result": {
-    "item": "minecraft:sand",
-    "count": 4
+    "count": 4,
+    "id": "minecraft:sand"
   }
 }

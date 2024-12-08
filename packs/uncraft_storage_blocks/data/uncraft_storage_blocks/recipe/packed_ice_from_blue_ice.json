@@ -3,12 +3,10 @@
   "category": "misc",
   "group": "packed_ice",
   "ingredients": [
-    {
-      "item": "minecraft:blue_ice"
-    }
+    "minecraft:blue_ice"
   ],
   "result": {
-    "item": "minecraft:packed_ice",
-    "count": 9
+    "count": 9,
+    "id": "minecraft:packed_ice"
   }
 }

@@ -3,12 +3,10 @@
   "category": "misc",
   "group": "nether_brick",
   "ingredients": [
-    {
-      "item": "minecraft:nether_bricks"
-    }
+    "minecraft:nether_bricks"
   ],
   "result": {
-    "item": "minecraft:nether_brick",
-    "count": 4
+    "count": 4,
+    "id": "minecraft:nether_brick"
   }
 }

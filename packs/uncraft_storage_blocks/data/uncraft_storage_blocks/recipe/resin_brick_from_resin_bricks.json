@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "resin_brick",
+  "ingredients": [
+    "minecraft:resin_bricks"
+  ],
+  "result": {
+    "count": 4,
+    "id": "minecraft:resin_brick"
+  }
+}

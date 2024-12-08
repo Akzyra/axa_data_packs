@@ -3,12 +3,10 @@
   "category": "misc",
   "group": "honeycomb",
   "ingredients": [
-    {
-      "item": "minecraft:honeycomb_block"
-    }
+    "minecraft:honeycomb_block"
   ],
   "result": {
-    "item": "minecraft:honeycomb",
-    "count": 4
+    "count": 4,
+    "id": "minecraft:honeycomb"
   }
 }

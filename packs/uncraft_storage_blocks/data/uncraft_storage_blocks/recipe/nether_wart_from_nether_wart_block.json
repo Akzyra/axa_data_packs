@@ -3,12 +3,10 @@
   "category": "misc",
   "group": "nether_wart",
   "ingredients": [
-    {
-      "item": "minecraft:nether_wart_block"
-    }
+    "minecraft:nether_wart_block"
   ],
   "result": {
-    "item": "minecraft:nether_wart",
-    "count": 9
+    "count": 9,
+    "id": "minecraft:nether_wart"
   }
 }

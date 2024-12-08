@@ -3,12 +3,10 @@
   "category": "misc",
   "group": "prismarine_shard",
   "ingredients": [
-    {
-      "item": "minecraft:prismarine_bricks"
-    }
+    "minecraft:prismarine"
   ],
   "result": {
-    "item": "minecraft:prismarine_shard",
-    "count": 9
+    "count": 4,
+    "id": "minecraft:prismarine_shard"
   }
 }

@@ -3,12 +3,10 @@
   "category": "misc",
   "group": "snowball",
   "ingredients": [
-    {
-      "item": "minecraft:snow_block"
-    }
+    "minecraft:snow_block"
   ],
   "result": {
-    "item": "minecraft:snowball",
-    "count": 4
+    "count": 4,
+    "id": "minecraft:snowball"
   }
 }
