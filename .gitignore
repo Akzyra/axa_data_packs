@@ -1,6 +1,14 @@
 .idea/
+.vscode/
+.venv/
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+jar_files/
 dist/
-_mc_assets/
-WIP_*/
+old/
+
 *.zip
 *.psd

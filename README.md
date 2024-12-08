@@ -1,16 +1,24 @@
-# axa_data_packs
+# axa_data_packs & pack_maker
+
+## Datapacks
 
 My personal Minecraft datapacks.
 
 All of them are very simple and only touch one small aspect, mostly crafting recipes.
 
-**All packs have a README, check it for details.**
+> **All packs have a README, check it for details.** \
+> [➡️ Go to `packs` folder](packs/)
 
 
-## Vanilla Tweaks
+### Credits for inspiration
 
-**No code/files were copied! I only took some inspiration to make my own packs.**
+No files copied, but I liked the ideas so I remade them from scratch with some tweaks.
 
-So I remade them from scratch. And also applied my own ideas for some.
+- Vanilla Tweaks
+- Husks drop Sand
 
 
+## pack_maker
+
+Collection of utility scripts for reading and creating minecraft JSON files
+Mostly used to generate crafting recipes automatically.
