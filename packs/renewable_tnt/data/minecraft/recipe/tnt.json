@@ -4,7 +4,7 @@
   "key": {
     "X": "minecraft:gunpowder",
     "P": "minecraft:paper",
-    "S": "minecraft:paper"
+    "S": "minecraft:string"
   },
   "pattern": [
     "XSX",
