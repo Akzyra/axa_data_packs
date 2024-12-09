@@ -168,8 +168,8 @@ Table of added unpacking recipes:
     readme += f"| {"Block":<{packed_width}} | {"Result":<{loose_width}} |\n"
     readme += f"|-{"-"*packed_width}-|-{"-"*loose_width}-|\n"
 
-    recipe_path = PACKS_FOLDER / PACK_NAME / "data" / PACK_NAME / "recipe"
-    recipe_path.mkdir(parents=True, exist_ok=True)
+    recipe_dir = PACKS_FOLDER / PACK_NAME / "data" / PACK_NAME / "recipe"
+    recipe_dir.mkdir(parents=True, exist_ok=True)
 
     for unpacking in UNPACKINGS:
         loose_item_raw = unpacking.loose_item.removeprefix("minecraft:")
@@ -177,7 +177,7 @@ Table of added unpacking recipes:
             "minecraft:"
         )
 
-        filepath = recipe_path / f"{loose_item_raw}_from_{packed_item_raw}.json"
+        filepath = recipe_dir / f"{loose_item_raw}_from_{packed_item_raw}.json"
         recipe = {
             "type": "minecraft:crafting_shapeless",
             "category": "misc",

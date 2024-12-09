@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "uncraft_slabs",
+  "category": "building",
+  "key": {
+    "#": "minecraft:purpur_slab"
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "count": 1,
+    "id": [
+      "minecraft:purpur_block",
+      "minecraft:purpur_pillar"
+    ]
+  }
+}

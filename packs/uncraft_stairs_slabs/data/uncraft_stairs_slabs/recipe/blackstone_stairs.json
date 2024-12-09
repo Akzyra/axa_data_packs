@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "uncraft_slabs",
+  "category": "building",
+  "key": {
+    "#": "minecraft:blackstone_stairs"
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 4,
+    "id": "minecraft:blackstone"
+  }
+}

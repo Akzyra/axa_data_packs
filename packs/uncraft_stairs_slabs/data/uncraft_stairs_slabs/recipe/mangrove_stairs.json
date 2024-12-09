@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "uncraft_slabs",
+  "category": "building",
+  "key": {
+    "#": "minecraft:mangrove_stairs"
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 4,
+    "id": "minecraft:mangrove_planks"
+  }
+}
