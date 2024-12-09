@@ -4,7 +4,7 @@ import pack_maker
 import pack_maker.uncraft_stairs_slabs
 import pack_maker.uncraft_storage_blocks
 
-PREFIX = "az_"
+PREFIX = "axa_"
 
 
 def main():
