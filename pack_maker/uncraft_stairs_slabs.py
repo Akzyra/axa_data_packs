@@ -41,7 +41,6 @@ def generate_pack():
                 "result": {"count": 1, "id": in_item},
             }
             save_json(uncraft_path, uncraft)
-            print(f"slab: {filename}")
 
         elif pattern_str == expected_stair or pattern_str == expected_stair_alt:
             # uncraft stair
@@ -61,8 +60,6 @@ def generate_pack():
             recipe["result"]["count"] = 8 if STAIR_MATH_MODE else 6
             stair_path = stair_dir / filename
             save_json(stair_path, recipe)
-
-            print(f"stair: {filename}")
 
 
 if __name__ == "__main__":
